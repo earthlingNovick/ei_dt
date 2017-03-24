@@ -1,0 +1,139 @@
+$enable-flex: true;
+
+$fa-font-path: "../bower_components/components-font-awesome/fonts";
+
+
+// bower:scss
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+@import "bower_components/components-font-awesome/scss/font-awesome.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+}
+
+main {
+  height: 100%;
+}
+
+.primary-content {
+  min-height: 100%;
+  .call-list {
+    overflow:auto;
+    padding-bottom:10rem; /* this needs to be bigger than footer height*/
+  }
+}
+
+/* Custom page footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 3rem;
+  padding-top:1rem;
+  width: 100%;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+.call-list {
+  h5 {
+    color: white;
+    font-weight: normal;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  .call-table {
+    th:nth-of-type(3) {
+      text-align: center;
+    }
+    .call-item {
+      &:nth-child(even) {
+        background-color: $gray-lighter;
+      }
+      td {
+        padding: 1rem .5rem;
+      }
+      .message {
+        .time {
+          margin-right: 1rem;
+        }
+        .playback-toggle {
+          color: $green;
+        }
+      }
+      .priority-icon {
+        text-align: center;
+        color: $red;
+      }
+      .call-complete {
+        fieldset {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
