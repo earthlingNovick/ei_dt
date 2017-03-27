@@ -6,10 +6,12 @@
  */
 
 // Core variables and mixins
-@import "bower_components/bootstrap/scss/custom";
 @import "variables4";
 @import "bower_components/bootstrap/scss/mixins";
+@import "bower_components/bootstrap/scss/custom";
 
+// Reset and dependencies
+@import "bower_components/bootstrap/scss/normalize";
 @import "bower_components/bootstrap/scss/print";
 
 // Core CSS
